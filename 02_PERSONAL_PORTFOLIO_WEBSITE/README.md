@@ -1,11 +1,11 @@
-🌐 Meet Parsana's Personal Portfolio Website
+# 🌐 Meet Parsana's Personal Portfolio Website
 
 Welcome to my personal portfolio website! 🎨✨  
 This project showcases my skills, projects, and passion for technology.  
 
 ---
 
-📚 About This Project
+## 📚 About This Project
 
 This website was created with:
 
@@ -17,7 +17,7 @@ The result is a modern, fully responsive portfolio site that adapts seamlessly a
 
 ---
 
-🛠️ Features
+## 🛠️ Features
 
 ✅ **Fully Responsive Design**  
 ✅ **Scroll Reveal Animations**  
@@ -28,7 +28,7 @@ The result is a modern, fully responsive portfolio site that adapts seamlessly a
 
 ---
 
-🗂️ Sections Included
+## 🗂️ Sections Included
 
 - 🏠 **Home** – Introduction and social links
 - 👤 **About** – My background and interests
@@ -38,7 +38,7 @@ The result is a modern, fully responsive portfolio site that adapts seamlessly a
 
 ---
 
-🧩 Libraries & CDNs Used
+## 🧩 Libraries & CDNs Used
 
 - 🎯 **[ScrollReveal](https://scrollrevealjs.org/)** – For smooth element animations on scroll
 - ✉️ **[EmailJS](https://www.emailjs.com/)** – To handle form submissions without a backend
@@ -49,7 +49,7 @@ The result is a modern, fully responsive portfolio site that adapts seamlessly a
 
 ---
 
-🚀 How to Use
+## 🚀 How to Use
 
 1. Clone this repository
 2. Open `index.html` in your browser
@@ -58,15 +58,14 @@ The result is a modern, fully responsive portfolio site that adapts seamlessly a
 
 ---
 
-💡 Inspiration
+## 💡 Inspiration
 
 I built this website to practice modern web development and to create a professional space to present myself online. The combination of **self-learning**, **YouTube resources**, and **AI assistance** made it a fantastic learning experience.
 
 ---
 
-📬 Contact
+## 📬 Contact
 
 If you’d like to connect, please use the contact form on the site or reach out via my social profiles!
 
 🌟 **Thank you for visiting my portfolio. Keep Rising 🚀.**
-
