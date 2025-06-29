@@ -1,314 +1,317 @@
+/* UNIVERSAL STYLES  */
 * {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
 }
 
+/* BODY STYLES  */
 body {
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  background: #f0f8ff;
-  color: #1a1a1a;
-  overflow-x: hidden;
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background: #f0f8ff;
+      color: #1a1a1a;
+      overflow-x: hidden;
 }
 
+/* ROOT COLOURS  */
 :root {
-  --primary-blue: #ffee00;
-  --secondary-blue: #ffee00;
+      --primary-blue: #ffee00;
+      --secondary-blue: #ffee00;
+}
+
+/* NAVBAR  */
+.navbar-toggler{
+      background-color: black;
+      color: black;
 }
 
 .navbar {
-  background: linear-gradient(
-    to right,
-    var(--primary-blue),
-    var(--secondary-blue)
-  );
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      background: linear-gradient(to right,
+                  var(--primary-blue),
+                  var(--secondary-blue));
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-brand,
 .nav-link {
-  color: black !important;
-  font-weight: 500;
-  transition: all 0.3s ease;
+      color: black !important;
+      font-weight: 500;
+      transition: all 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #1aff00 !important;
-  text-shadow: 0 0 10px #ffffffaa;
+      color: darkgreen !important;
+      text-shadow: 0 0 10px #ffffffaa;
+      font-weight: 1000;
 }
 
+/* HERO SECTION  */
 .hero {
-  position: relative;
-  padding: 140px 20px 100px;
-  background: linear-gradient(
-    to right,
-    var(--primary-blue),
-    var(--secondary-blue)
-  );
-  text-align: center;
-  color: black;
-  overflow: hidden;
+      position: relative;
+      padding: 140px 20px 100px;
+      background: linear-gradient(to right,
+                  var(--primary-blue),
+                  var(--secondary-blue));
+      text-align: center;
+      color: black;
+      overflow: hidden;
 }
 
 #particles-js {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
 }
 
-.hero > * {
-  position: relative;
-  z-index: 2;
+.hero>* {
+      position: relative;
+      z-index: 2;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  font-weight: 700;
+      font-size: 3rem;
+      font-weight: 700;
 }
 
 .hero p {
-  font-size: 1.25rem;
-  margin-top: 10px;
+      font-size: 1.25rem;
+      margin-top: 10px;
 }
 
 .profile-pic-wrapper {
-  position: relative;
-  display: inline-block;
-  animation: floatImage 6s ease-in-out infinite;
-  transition: transform 0.4s ease;
+      position: relative;
+      display: inline-block;
+      animation: floatImage 6s ease-in-out infinite;
+      transition: transform 0.4s ease;
 }
 
 .profile-pic-wrapper::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 240px;
-  height: 240px;
-  /* background: conic-gradient(from 0deg, #00ffff, #ff00ff, #00ffcc, #ffcc00, #00ffff); */
-  background: conic-gradient(
-    from 0deg,
-    #00ffff,
-    #ff00ff,
-    #00ffcc,
-    #ffcc00,
-    #00ffff
-  );
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 240px;
+      height: 240px;
+      /* background: conic-gradient(from 0deg, #00ffff, #ff00ff, #00ffcc, #ffcc00, #00ffff); */
+      background: conic-gradient(from 0deg,
+                  #00ffff,
+                  #ff00ff,
+                  #00ffcc,
+                  #ffcc00,
+                  #00ffff);
 
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  animation: rotateRing 6s linear infinite;
-  z-index: 1;
-  filter: blur(8px);
-  opacity: 0.6;
-  transition: all 0.4s ease;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      animation: rotateRing 6s linear infinite;
+      z-index: 1;
+      filter: blur(8px);
+      opacity: 0.6;
+      transition: all 0.4s ease;
 }
 
 .profile-pic {
-  position: relative;
-  z-index: 2;
-  width: 190px;
-  height: 190px;
-  border-radius: 50%;
-  box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
-  opacity: 0;
-  transform: scale(0.8) rotate(-5deg);
-  animation: profileEntrance 1.2s ease-out forwards;
-  animation-delay: 0.5s;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+      position: relative;
+      z-index: 2;
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
+      opacity: 0;
+      transform: scale(0.8) rotate(-5deg);
+      animation: profileEntrance 1.2s ease-out forwards;
+      animation-delay: 0.5s;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 @keyframes profileEntrance {
-  to {
-    opacity: 1;
-    transform: scale(1) rotate(0deg);
-  }
+      to {
+            opacity: 1;
+            transform: scale(1) rotate(0deg);
+      }
 }
 
 @keyframes bounceProfile {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
 
-  30% {
-    transform: translateY(-20px);
-  }
+      0%,
+      100% {
+            transform: translateY(0);
+      }
 
-  60% {
-    transform: translateY(-10px);
-  }
+      30% {
+            transform: translateY(-20px);
+      }
+
+      60% {
+            transform: translateY(-10px);
+      }
 }
 
 .profile-pic-wrapper:hover {
-  animation: bounceProfile 0.8s ease;
-  transform: scale(1.05) rotateZ(1deg);
+      animation: bounceProfile 0.8s ease;
+      transform: scale(1.05) rotateZ(1deg);
 }
 
 .profile-pic:hover {
-  transform: perspective(600px) rotateY(10deg) scale(1.05);
-  box-shadow: 0 20px 40px rgba(0, 255, 255, 0.5);
+      transform: perspective(600px) rotateY(10deg) scale(1.05);
+      box-shadow: 0 20px 40px rgba(0, 255, 255, 0.5);
 }
 
 @keyframes rotateRing {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
+      0% {
+            transform: translate(-50%, -50%) rotate(0deg);
+      }
 
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
+      100% {
+            transform: translate(-50%, -50%) rotate(360deg);
+      }
 }
 
 @keyframes floatImage {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
 
-  50% {
-    transform: translateY(-10px);
-  }
+      0%,
+      100% {
+            transform: translateY(0px);
+      }
+
+      50% {
+            transform: translateY(-10px);
+      }
 }
 
+/* SECTION MAIN STYLE */
 section {
-  padding: 100px 0;
+      padding: 100px 0;
 }
 
 .section-title {
-  font-size: 2.5rem;
-  text-align: center;
-  font-weight: 700;
-  /* color: var(--primary-blue); */
-  color: black;
-  margin-bottom: 40px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+      font-size: 2.5rem;
+      text-align: center;
+      font-weight: 700;
+      color: black;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
 }
 
 @property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
+      syntax: "<angle>";
+      initial-value: 0deg;
+      inherits: false;
 }
 
 .glow-card {
-  position: relative;
-  padding: 3px;
-  border-radius: 20px;
-  /* background: conic-gradient(from var(--angle), #ff0077, #00f0ff, #0077ff, #00ff77, #ff0077);DEFAULT */
-  /* background: conic-gradient(from var(--angle), #00FFFF, #FF2E63, #B9FBC0, #9D4EDD); 1. Neon Vibes – Bold & Futuristic*/
-  /* background: conic-gradient(from var(--angle), #A8D5BA, #FFBCBC, #AEC6CF, #D8B4A0); 2. Organic Calm – Soft & Minimalist */
-  /* background: conic-gradient(from var(--angle), #48CAE4, #7400B8, #FF9F1C, #80ED99); 3. Modern Gradient Burst – Stylish & Trendy */
-  background: conic-gradient(
-    from var(--angle),
-    #2e2e2e,
-    #00b8a9,
-    #f1f1f1,
-    #ffd300
-  );
-  animation: spin 4s linear infinite;
-  z-index: 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      padding: 3px;
+      border-radius: 20px;
+      background: conic-gradient(from var(--angle),
+                  #2e2e2e,
+                  #00b8a9,
+                  #f1f1f1,
+                  #ffd300);
+      animation: spin 4s linear infinite;
+      z-index: 0;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .glow-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  filter: blur(15px);
-  z-index: -1;
-  background: inherit;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      filter: blur(15px);
+      z-index: -1;
+      background: inherit;
 }
 
 .content-box {
-  background: white;
-  border-radius: 17px;
-  padding: 30px;
-  z-index: 1;
+      background: white;
+      border-radius: 17px;
+      padding: 30px;
+      z-index: 1;
 }
 
 @keyframes spin {
-  from {
-    --angle: 0deg;
-  }
+      from {
+            --angle: 0deg;
+      }
 
-  to {
-    --angle: 360deg;
-  }
+      to {
+            --angle: 360deg;
+      }
 }
 
 .glow-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      transform: scale(1.05);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 .btn-custom {
-  background: linear-gradient(
-    to right,
-    var(--primary-blue),
-    var(--secondary-blue)
-  );
-  color: white;
-  padding: 10px 30px;
-  border: none;
-  border-radius: 25px;
-  font-weight: bold;
-  transition: 0.3s;
+      background: linear-gradient(to right,
+                  var(--primary-blue),
+                  var(--secondary-blue));
+      color: white;
+      padding: 10px 30px;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: 0.3s;
 }
 
-.btn-custom:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(30, 60, 114, 0.5);
-}
 
+/* SKILLS SECTION STYLES */
 .progress {
-  height: 20px;
-  background-color: #e0e0e0;
+      height: 20px;
+      background-color: #e0e0e0;
 }
 
 .progress-bar {
-  font-weight: 600;
+      font-weight: 600;
 }
 
 #skills .section-subtitle {
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 30px;
-  color: #333;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 30px;
+      color: #333;
 }
 
 #about {
-  background: #f0fbff;
+      background: #f0fbff;
 }
 
 #skills {
-  background: #e6f0ff;
+      background: #e6f0ff;
 }
 
 #projects {
-  background: #d0e4ff;
+      background: #d0e4ff;
 }
 
 #education {
-  background: #bdd7ff;
+      background: #bdd7ff;
 }
 
 #contact {
-  background: #a8c9ff;
+      background: #a8c9ff;
 }
 
+/* FOOTER */
 .footer {
-  background: var(--primary-blue);
-  color: black;
-  padding: 20px 0;
-  text-align: center;
+      background: var(--primary-blue);
+      color: black;
+      padding: 20px 0;
+      text-align: center;
+}
+
+/* SCROLL-UP BUTTON  */
+.btn-custom:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(30, 60, 114, 0.5);
 }
