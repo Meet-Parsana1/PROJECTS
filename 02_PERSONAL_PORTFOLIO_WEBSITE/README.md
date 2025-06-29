@@ -25,6 +25,8 @@ The result is a modern, fully responsive portfolio site that adapts seamlessly a
 ✅ **SweetAlert2 Popups for Notifications**  
 ✅ **Dynamic Typing Animations**  
 ✅ **Custom Favicon**
+✅ **Customized Scroll Bar**
+✅ **Customized Dot Animation in the Background**
 
 ---
 
