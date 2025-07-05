@@ -389,52 +389,84 @@ const inputs = document.querySelectorAll('.field .item');
 
 inputs.forEach((input) => {
       input.addEventListener('focus', () => {
-            input.style.borderColor = 'white';
+            input.style.borderColor = 'black';
       });
 
       input.addEventListener('blur', () => {
-            input.style.borderColor = '#007bff';
+            // input.style.borderColor = '#007bff';
+            input.style.borderColor = 'blue';
       });
 });
 
-/*========================= FOR DOT ANIMATION =========================*/
-const canvas = document.getElementById('dot-grid');
-const ctx = canvas.getContext('2d');
-
-function resizeCanvas() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-}
-resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
-
-const spacing = 36;
-let dots = [];
-
-function initDots() {
-      dots = [];
-      for (let x = 0; x < canvas.width; x += spacing) {
-            for (let y = 0; y < canvas.height; y += spacing) {
-                  dots.push({ x, y, r: Math.random() * 1.3 + 2 });
-            }
-      }
-}
-initDots();
-
-function drawDots() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      const t = Date.now() / 1000;
-      for (const dot of dots) {
-            const pulse = 0.2 + Math.sin(t * 2 + dot.x * 0.01 + dot.y * 0.01) * 0.2;
-            ctx.beginPath();
-            ctx.arc(dot.x, dot.y, dot.r, 0, 2 * Math.PI);
-            // ctx.fillStyle = `rgba(30, 144, 255, ${pulse})`;
-            ctx.fillStyle = `rgba(0, 123, 255, ${pulse})`;
-            ctx.fill();
-      }
-      requestAnimationFrame(drawDots);
-}
-drawDots();
+/*========================= FOR PARTICLES JS =========================*/
+particlesJS('particles-js', {
+      particles: {
+            number: {
+                  value: 90,
+                  density: {
+                        enable: true,
+                        value_area: 800,
+                  },
+            },
+            color: {
+                  // value: ['#00BFFF', '#1E90FF', '#007bff'], // Blue gradient
+                  value: '#000',
+            },
+            shape: {
+                  type: ['circle', 'triangle', 'polygon'], // Mixed shapes
+            },
+            opacity: {
+                  // value: 0.6,
+                  value: 0.3,
+                  random: false,
+            },
+            size: {
+                  value: 4,
+                  random: false,
+            },
+            line_linked: {
+                  enable: true,
+                  distance: 150,
+                  // color: '#1E90FF',
+                  color: '#000',
+                  // opacity: 0.4,
+                  opacity: 0.6,
+                  width: 1,
+            },
+            move: {
+                  enable: true,
+                  speed: 5,
+                  direction: 'none',
+                  random: false,
+                  straight: false,
+                  out_mode: 'out',
+            },
+      },
+      interactivity: {
+            detect_on: 'canvas',
+            events: {
+                  onhover: {
+                        enable: true,
+                        mode: 'repulse', // Push away effect on hover
+                  },
+                  onclick: {
+                        enable: true,
+                        mode: 'push', // Add particles on click
+                  },
+                  resize: true,
+            },
+            modes: {
+                  repulse: {
+                        distance: 100,
+                        duration: 0.4,
+                  },
+                  push: {
+                        particles_nb: 5,
+                  },
+            },
+      },
+      retina_detect: true,
+});
 
 /*========================= FOR SCROLL UP BUTTON =========================*/
 const scrollUpBtn = document.getElementById('scrollUpBtn');
@@ -459,3 +491,22 @@ document.addEventListener('keydown', function (event) {
             event.preventDefault();
       }
 });
+
+/*========================= FOR DISABLING DEVELOPER MODE =========================*/
+document.onkeydown = function (e) {
+      if (e.code === 'F12') {
+            return false;
+      }
+      if (e.ctrlKey && e.shiftKey && e.code === 'KeyI') {
+            return false;
+      }
+      if (e.ctrlKey && e.shiftKey && e.code === 'KeyC') {
+            return false;
+      }
+      if (e.ctrlKey && e.shiftKey && e.code === 'KeyJ') {
+            return false;
+      }
+      if (e.ctrlKey && e.code === 'KeyU') {
+            return false;
+      }
+};
