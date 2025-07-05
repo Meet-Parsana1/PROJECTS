@@ -1,5 +1,4 @@
 /*========================= GOOGLE FONTS CDN =========================*/
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 /*========================= FOR SCROLL BAR CUSTOMIZATION =========================*/
@@ -11,20 +10,17 @@
 
 /* Background of the scrollbar track */
 ::-webkit-scrollbar-track {
-      background: black;
+      background: white;
 }
 
 /* Scrollbar thumb (draggable part) */
 ::-webkit-scrollbar-thumb {
-      /* background: linear-gradient(#007bff, #00BFFF, #007acc); */
-      /* background: #00bfff; */
       background: BLUE;
 }
 
 /* On hover */
 ::-webkit-scrollbar-thumb:hover {
-      /* background: #007acc; */
-      background: yellow;
+      background: #007acc;
 }
 
 /*========================= UNIVERSAL =========================*/
@@ -43,19 +39,7 @@
       --bg--color: #0e1116;
       --second-bg-color: #1a2238;
       --text-color: #eaeaea;
-      /* --main-color: #007bff; */
       --main-color: blue;
-}
-
-/*========================= DOT ANIMATION =========================*/
-#dot-grid {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      pointer-events: none;
-      z-index: 0;
 }
 
 html {
@@ -68,8 +52,12 @@ body {
 }
 
 body {
-      background: black;
+      background: white;
       color: var(--text-color);
+}
+
+#home {
+      background: #F8F8F8;
 }
 
 section {
@@ -84,11 +72,15 @@ section {
       left: 0;
       width: 100%;
       padding: 2rem 9%;
-      background: black;
+      background: #FFFFFF;
       display: flex;
       justify-content: space-between;
       align-items: center;
       z-index: 100;
+}
+
+.header .logo {
+      color: #000;
 }
 
 .header.sticky {
@@ -106,7 +98,7 @@ section {
       position: relative;
       font-size: 1.7rem;
       font-weight: 540;
-      color: var(--text-color);
+      color: black;
       transition: 0.3s;
       margin-right: 3rem;
       text-decoration: none;
@@ -136,11 +128,51 @@ section {
 /* HIDDEN MENU ICON */
 #menu-icon {
       font-size: 3.6rem;
-      color: white;
+      color: black;
       display: none;
 }
 
 /*========================= HOME SECTION =========================*/
+
+/* Particles Js */
+.home {
+      position: relative;
+      z-index: 1;
+}
+
+#particles-js canvas {
+      filter: brightness(0.9) contrast(1.1);
+}
+
+#particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      /* send far behind */
+      pointer-events: none;
+}
+
+body {
+      margin: 0;
+      padding: 0;
+      position: relative;
+      z-index: 0;
+}
+
+section {
+      position: relative;
+      z-index: 1;
+}
+
+.home {
+      background: transparent !important;
+}
+
+/* Over  */
+
 .home {
       display: flex;
       justify-content: center;
@@ -225,6 +257,7 @@ section {
       width: 95%;
       object-fit: cover;
       mix-blend-mode: lighten;
+      z-index: 1;
 }
 
 /* Typing animation */
@@ -254,7 +287,8 @@ section {
       /* font-size: 3.5rem; */
       font-size: 4.2rem;
       color: transparent;
-      background: linear-gradient(90deg, var(--main-color), #1E90FF, #00BFFF);
+      /* background: linear-gradient(90deg, var(--main-color), #1E90FF, #00BFFF); */
+      background: blue;
       -webkit-background-clip: text;
       background-clip: text;
       display: inline-block;
@@ -310,6 +344,15 @@ span {
       font-size: 5.6rem;
       font-weight: 700;
       line-height: 1.3;
+      color: #000;
+}
+
+.home-content h3 {
+      color: #000;
+}
+
+.home-content h2 {
+      color: #000;
 }
 
 .home-content p {
@@ -333,7 +376,7 @@ span {
 
 .social-media a:hover {
       background: var(--main-color);
-      color: var(--second-bg-color);
+      color: white;
       box-shadow: 0 0 1rem var(--main-color);
 }
 
@@ -344,7 +387,8 @@ span {
       border-radius: 4rem;
       box-shadow: 0 0 1rem var(--main-color);
       font-size: 1.6rem;
-      color: var(--second-bg-color);
+      /* color: var(--second-bg-color); */
+      color: white;
       letter-spacing: 0.1rem;
       font-weight: 600;
       transition: 0.5s ease;
@@ -412,6 +456,7 @@ span {
       border-radius: 10px;
       overflow: hidden;
       flex-shrink: 0;
+      /* margin-left: 12rem; */
       background-color: white;
       box-shadow:
             0 0px 10px white,
@@ -434,17 +479,24 @@ span {
 .about-content h3 {
       font-size: 2.8rem;
       margin-bottom: 1rem;
+      /* margin-left: 10rem; */
 }
 
 .about-content p {
       font-size: 1.6rem;
       margin-bottom: 1.5rem;
+      /* margin-left: 10rem; */
 }
 
 .about-content {
       max-width: 600px;
       text-align: left;
 }
+
+
+/* #readMoreBtn {
+      margin-left: 10rem;
+} */
 
 .extra-about {
       display: none;
@@ -489,6 +541,11 @@ span {
 /* A. Soft Skills section */
 .services h2 {
       margin-bottom: 3.5rem;
+      color: #000;
+}
+
+.services h1 {
+      color: #000;
 }
 
 .sub-heading1 {
@@ -530,8 +587,6 @@ span {
 
 .services-container .services-box:hover {
       transform: scale(1.02);
-      /* background-color: var(--second-bg-color);
-      color: var(--main-color); */
       color: black;
       background-color: white;
 }
@@ -570,8 +625,7 @@ span {
 /* B. Technical Skills section */
 .tech-skills-container {
       background: #01002C;
-      /* background: #002147; */
-      /* background: #191970; */
+      /* background: var(--main-color); */
       border-radius: 2.5rem;
       /* border: 0.1rem solid var(--main-color); */
       border: 0.1rem solid white;
@@ -745,17 +799,20 @@ span {
       position: relative;
       display: inline-flex;
       padding: 1.3rem;
-      font-size: 3rem;
-      color: white;
+      font-size: 2rem;
+      /* color: white; */
+      color: black;
       border-radius: 50%;
-      background: black;
+      /* background: black; */
+      background: white;
       transition: 0.5s;
       margin-top: 0.6rem;
 }
 
 .portfolio-box .live-github a:hover {
       background-color: var(--main-color);
-      color: black;
+      /* color: black; */
+      color: white;
 }
 
 .portfolio-box .live-github a:first-child {
@@ -783,9 +840,10 @@ span {
 }
 
 .portfolio-box .live-github a:hover span {
-      top: -70%;
+      top: -90%;
       opacity: 1;
       transform: translateX(-50%) scale(1);
+      color: #000;
 }
 
 .portfolio-box .portfolio-carousel {
@@ -865,14 +923,20 @@ span {
       cursor: not-allowed;
 }
 
+/* .portfolio-carousel:hover {
+      transform: scale(1.08);
+      transition: transform 0.2s ease;
+} */
+
 /*========================= CONTACT SECTION =========================*/
+
 .contact h2 i {
       padding: 10px;
 }
 
 .contact h2 {
       font-size: 4rem;
-      color: #ededed;
+      color: black;
       text-align: center;
       margin-bottom: 3rem;
 }
@@ -899,17 +963,19 @@ span {
 .field .item {
       width: 100%;
       padding: 1.8rem;
-      background: transparent;
-      border: 3px solid var(--main-color);
+      background: white;
+      border: 3px solid blue;
       border-radius: 0.6rem;
       font-size: 1.6rem;
-      color: #ededed;
+      color: #000;
       margin-top: 0.5rem;
       transition: border-color 0.3s ease;
+      font-weight: 600;
 }
 
 .field .item::placeholder {
-      color: rgba(255, 255, 255, 0.3);
+      /* color: rgba(255, 255, 255, 0.3); */
+      color: black;
 }
 
 .textarea-field {
@@ -928,7 +994,8 @@ form button.btn {
       border-radius: 2.2rem;
       box-shadow: 0 0 10px var(--main-color);
       font-size: 1.6rem;
-      color: #333;
+      /* color: #333; */
+      color: white;
       letter-spacing: 0.1rem;
       font-weight: 600;
       cursor: pointer;
@@ -1008,9 +1075,11 @@ form button.btn:hover {
       justify-content: center;
       width: 40px;
       height: 40px;
-      background-color: black;
+      /* background-color: black; */
+      background-color: white;
       border-radius: 50%;
-      color: white;
+      /* color: white; */
+      color: black;
       font-size: 1.6rem;
       margin-right: 10px;
       margin-top: 8px;
@@ -1018,8 +1087,11 @@ form button.btn:hover {
 }
 
 .footer-socials a:hover {
-      background-color: var(--main-color);
-      color: black;
+      /* background-color: var(--main-color);
+      color: black; */
+      background-color: #01002C;
+      color: white;
+      border: 1.3px solid white;
 }
 
 .socials {
@@ -1276,7 +1348,7 @@ form button.btn:hover {
             left: 0;
             width: 100%;
             padding: 1rem 4%;
-            background: var(--bg--color);
+            background: white;
             border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
             box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
             display: none;
